@@ -16,12 +16,12 @@ h3 { font: 28px/16px "league-gothic-1","league-gothic-2"; text-align: center; }
 #Header_Main ul { float: left; margin: 14px 0 0 79px; }
 #Header_Main ul li { float: left; margin: 0 10px 0 0; }
 #Header_Main ul li a { color: white; }
-#MB_Wrapper { position: fixed; top: 107px; left: 83px; width: 395px; /* margin: 0 0 0 -197px; */ }
+#MB_Wrapper { position: fixed; top: 75px; left: 83px; width: 395px; /* margin: 0 0 0 -197px; */ }
 #Focus_Top { width: 395px; height: 197px; margin: 0 auto; background: url(../images/mb.sprite.png) 0 -279px no-repeat; 
   -webkit-border-top-left-radius: 197px; -webkit-border-top-right-radius: 197px;
      -moz-border-radius-topleft:  197px;    -moz-border-radius-topright:  197px;
           border-top-left-radius: 197px;         border-top-right-radius: 197px;
-  -webkit-transition: all .00001s none;
+/*   -webkit-transition: all .00001s none; */
 }
 #Focus_Btm { position: relative; width: 395px; height: 197px; margin: 0 auto; background: black; 
   -webkit-border-bottom-left-radius: 197px; -webkit-border-bottom-right-radius: 197px;

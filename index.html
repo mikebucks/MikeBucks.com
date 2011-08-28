@@ -16,7 +16,6 @@
   <body> 
  
   <div id="Header_Main"> 
-    
     <ul> 
       <li><a href="/docs/MikeBucksResume.rtf">Resum&eacute;</a></li> 
       <li><a href="mailto:dangerbucks@gmail.com">Email</a></li> 
@@ -54,40 +53,6 @@
   </div> 
  
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script> 
-  <script type="text/javascript"> 
-    //Steal this code
-    $(document).ready(function() {
-      //Listeners
-      $(document).scroll(function(e) {
-        detectYposition();
-      });
-
-      
-    });
-
-     function detectYposition() {
-      var yScrollPosition = $(document).scrollTop();
-      animateBackground(yScrollPosition);
-      
-      if (yScrollPosition > 250) {
-        swapTextWeb();
-      } else {
-        swapTextColordo();
-      }
-      
-    }
- 
-    function animateBackground(y) {
-      $('#Focus_Top').css('backgroundPosition', '0 ' + '-' + (279 - y) + 'px'); //initial BG position = '0 -279px'
-    }
-    
-    function swapTextWeb() {
-      $('#Focus_Btm span').html('The Web');
-    }
-    
-    function swapTextColordo() {
-      $('#Focus_Btm span').html('Colorado');
-    }
-  </script> 
+  <script type="text/javascript" src="javascripts/mb.js"></script>
   </body> 
 </html> 
