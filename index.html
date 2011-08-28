@@ -64,6 +64,7 @@
 
       
     });
+
      function detectYposition() {
       var yScrollPosition = $(document).scrollTop();
       animateBackground(yScrollPosition);
@@ -74,13 +75,6 @@
         swapTextColordo();
       }
       
-/*
-      if (yScrollPosition > 325) {
-        fixContent();
-      } else {
-        unFixContent();
-      }
-*/
     }
  
     function animateBackground(y) {
@@ -93,14 +87,6 @@
     
     function swapTextColordo() {
       $('#Focus_Btm span').html('Colorado');
-    }
-    
-    function fixContent() {
-      $('#MB_Content').addClass('fixed');
-    }
-    
-    function unFixContent() {
-      $('#MB_Content').removeClass('fixed');
     }
   </script> 
   </body> 
