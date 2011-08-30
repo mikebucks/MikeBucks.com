@@ -1,5 +1,5 @@
 (function() {
-  var animateBackground, detectYposition, setUpPage;
+  var animateBackground, detectYposition, navScrolling, setUpPage;
   setUpPage = function() {
     var contentHeight, pageHeight;
     pageHeight = $(window).height();
@@ -12,19 +12,41 @@
     var yScrollPosition;
     yScrollPosition = $(document).scrollTop();
     animateBackground(yScrollPosition);
-    if (yScrollPosition > 250) {
-      return $('#Focus_Btm span').html('The Web');
-    } else {
+    if (yScrollPosition > 645) {
+      return $('#Focus_Btm span').html('You');
+    } else if (yScrollPosition > 300) {
       return $('#Focus_Btm span').html('Colorado');
+    } else {
+      return $('#Focus_Btm span').html('The Web');
     }
   };
   animateBackground = function(y) {
-    return $('#Focus_Top').css('backgroundPosition', '0 ' + '-' + (279 - y) + 'px');
+    return $('#Focus_Top').css('backgroundPosition', '0 ' + '-' + (600 - y) + 'px');
+  };
+  navScrolling = function(b) {
+    var scrollPos;
+    if (b === 'web') {
+      scrollPos = 0;
+    } else if (b === 'colorado') {
+      scrollPos = 324;
+    } else {
+      scrollPos = 650;
+    }
+    return $('html, body').animate({
+      scrollTop: scrollPos
+    }, 300, 'linear');
   };
   $(document).ready(function() {
     setUpPage();
-    return $(document).scroll(function(e) {
+    detectYposition();
+    $(document).scroll(function(e) {
       return detectYposition();
+    });
+    return $('#Nav_Main a').click(function(e) {
+      var $btn;
+      $btn = $(this).attr('href').replace('#', '');
+      navScrolling($btn);
+      return e.preventDefault();
     });
   });
 }).call(this);
