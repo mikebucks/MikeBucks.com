@@ -8,14 +8,14 @@ detectYposition = ->
   yScrollPosition = $(document).scrollTop()
   animateBackground(yScrollPosition)
   if (yScrollPosition > 645)
-    $('#Focus_Btm span').html('You')
+    $('#Focus_Btm span').html('Beer')
   else if (yScrollPosition > 300)
     $('#Focus_Btm span').html('Colorado')
   else
     $('#Focus_Btm span').html('The Web')
 
 animateBackground = (y) ->
-  $('#Focus_Top').css('backgroundPosition', '0 ' + '-' + (600 - y) + 'px') #initial BG position = '0 -279px'
+  $('#Focus_Top').css('backgroundPosition', '0 ' + '-' + (600 - y) + 'px') #initial BG position = '0 -600px'
 
 navScrolling = (b) ->  
   if (b == 'web')
@@ -25,7 +25,7 @@ navScrolling = (b) ->
   else
     scrollPos = 650
   $('html, body').animate(
-    scrollTop: scrollPos, 400, 'easein')
+    scrollTop: scrollPos, 400)
 
 $(document).ready ->
   setUpPage()

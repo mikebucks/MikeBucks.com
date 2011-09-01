@@ -13,7 +13,7 @@
     yScrollPosition = $(document).scrollTop();
     animateBackground(yScrollPosition);
     if (yScrollPosition > 645) {
-      return $('#Focus_Btm span').html('You');
+      return $('#Focus_Btm span').html('Beer');
     } else if (yScrollPosition > 300) {
       return $('#Focus_Btm span').html('Colorado');
     } else {
@@ -34,7 +34,7 @@
     }
     return $('html, body').animate({
       scrollTop: scrollPos
-    }, 300, 'linear');
+    }, 400);
   };
   $(document).ready(function() {
     setUpPage();

@@ -18,8 +18,8 @@ h2 em { display: block; font: 38px "jbt-annabelle-1","jbt-annabelle-2"; }
 h3 { font: 28px/16px "league-gothic-1","league-gothic-2"; text-align: center; }
 
 #Nav_Main { position: fixed; z-index: 2; width: 100%; margin: 0 0 20px 0; border-top: solid 3px #000; }
-#Nav_Main ul { position: fixed; left: 253px; top: 445px; }
-#Nav_Main ul li { float: left; margin: 0 5px; }
+#Nav_Main ul { position: fixed; left: 262px; top: 445px; }
+#Nav_Main ul li { float: left; margin: 0 2px; }
 #Nav_Main ul li a { display: block; width: 9px; height: 9px; padding: 0; text-indent: -9999px; background: white;
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
