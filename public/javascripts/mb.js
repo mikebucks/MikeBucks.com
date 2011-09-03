@@ -5,19 +5,20 @@
     pageHeight = $(window).height();
     contentHeight = $('#MB_Content').height();
     if (pageHeight >= 585) {
-      return $('#MB_Content').height(pageHeight + contentHeight - 610);
+      return $('#MB_Content').height(pageHeight + contentHeight - 578);
     }
   };
   detectYposition = function() {
-    var yScrollPosition;
+    var $loveText, yScrollPosition;
     yScrollPosition = $(document).scrollTop();
+    $loveText = $('#Focus_Btm span');
     animateBackground(yScrollPosition);
     if (yScrollPosition > 645) {
-      return $('#Focus_Btm span').html('Beer');
+      return $loveText.html('Beer');
     } else if (yScrollPosition > 300) {
-      return $('#Focus_Btm span').html('Colorado');
+      return $loveText.html('Colorado');
     } else {
-      return $('#Focus_Btm span').html('The Web');
+      return $loveText.html('The Web');
     }
   };
   animateBackground = function(y) {
@@ -25,6 +26,7 @@
   };
   navScrolling = function(b) {
     var scrollPos;
+    $('#Focus_Btm').removeClass().addClass(b);
     if (b === 'web') {
       scrollPos = 0;
     } else if (b === 'colorado') {

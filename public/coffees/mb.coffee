@@ -2,22 +2,25 @@ setUpPage = ->
   pageHeight = $(window).height()
   contentHeight = $('#MB_Content').height()
   if (pageHeight >= 585)
-    $('#MB_Content').height(pageHeight + contentHeight - 610)
+    $('#MB_Content').height(pageHeight + contentHeight - 578)
 
 detectYposition = ->
   yScrollPosition = $(document).scrollTop()
+  $loveText = $('#Focus_Btm span')
+  
   animateBackground(yScrollPosition)
   if (yScrollPosition > 645)
-    $('#Focus_Btm span').html('Beer')
+    $loveText.html('Beer')
   else if (yScrollPosition > 300)
-    $('#Focus_Btm span').html('Colorado')
+    $loveText.html('Colorado')
   else
-    $('#Focus_Btm span').html('The Web')
+    $loveText.html('The Web')
 
 animateBackground = (y) ->
   $('#Focus_Top').css('backgroundPosition', '0 ' + '-' + (600 - y) + 'px') #initial BG position = '0 -600px'
 
-navScrolling = (b) ->  
+navScrolling = (b) ->
+  $('#Focus_Btm').removeClass().addClass b
   if (b == 'web')
     scrollPos = 0
   else if (b == 'colorado')
