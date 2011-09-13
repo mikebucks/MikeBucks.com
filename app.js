@@ -28,9 +28,10 @@ app.configure('production', function(){
 // Routes
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Mike Bucks Loves You'
+    title: 'Mike Bucks Loves RGB'
   });
 });
 
-app.listen(3000);
+var port = process.env.PORT || 3000;
+app.listen(port);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
