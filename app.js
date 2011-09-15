@@ -2,12 +2,11 @@
  * Module dependencies.
  */
 
-var express = require('express');
+var express = require('express'),
+    app = module.exports = express.createServer(),
+    port = process.env.PORT || 3000;
 
-var app = module.exports = express.createServer();
-
-// Configuration
-
+// Config
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
@@ -27,11 +26,16 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', function(req, res){
-  res.render('index', {
+  res.render('layout', {
     title: 'Mike Bucks Loves RGB'
   });
 });
+app.get('/resume', function(req, res){
+  res.render('resume', {
+    title: 'Resume',
+    layout: false
+  });
+});
 
-var port = process.env.PORT || 3000;
 app.listen(port);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
