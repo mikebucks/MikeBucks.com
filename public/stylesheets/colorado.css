@@ -27,7 +27,7 @@ em { font-style: italic; }
 #home h3 { font: 28px/16px "league-gothic-1","league-gothic-2"; text-align: center; }
 
 #home #Nav_Main { position: fixed; z-index: 2; width: 100%; margin: 0 0 20px 0; border-top: solid 3px #000; }
-#home #Nav_Main ul { position: fixed; left: 262px; top: 445px; }
+#home #Nav_Main ul { position: fixed; left: 262px; top: 429px; }
 #home #Nav_Main ul li { float: left; margin: 0 2px; }
 #home #Nav_Main ul li a { display: block; width: 9px; height: 9px; padding: 0; text-indent: -9999px; background: white;
   -webkit-border-radius: 10px;
