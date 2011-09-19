@@ -84,4 +84,6 @@ em { font-style: italic; }
             border-radius: none !important;
   }
   #home #MB_Content #web { padding: 0; }
+
+  #resume { margin: 0 10px; }
 }
