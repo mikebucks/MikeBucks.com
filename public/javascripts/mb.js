@@ -24,15 +24,18 @@
   animateBackground = function(y) {
     return $('#Focus_Top').css('backgroundPosition', '0 ' + '-' + (600 - y) + 'px');
   };
-  navScrolling = function(b) {
+  navScrolling = function($btn) {
     var scrollPos;
-    $('#Focus_Btm').removeClass().addClass(b);
-    if (b === 'web') {
-      scrollPos = 0;
-    } else if (b === 'colorado') {
-      scrollPos = 324;
-    } else {
-      scrollPos = 650;
+    $('#Focus_Btm').removeClass().addClass($btn);
+    switch ($btn) {
+      case 'web':
+        scrollPos = 0;
+        break;
+      case 'colorado':
+        scrollPos = 324;
+        break;
+      default:
+        scrollPos = 650;
     }
     return $('html, body').animate({
       scrollTop: scrollPos

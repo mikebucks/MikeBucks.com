@@ -9,6 +9,7 @@ detectYposition = ->
   $loveText = $('#Focus_Btm span')
   
   animateBackground(yScrollPosition)
+  
   if (yScrollPosition > 645)
     $loveText.html('Beer')
   else if (yScrollPosition > 300)
@@ -19,14 +20,14 @@ detectYposition = ->
 animateBackground = (y) ->
   $('#Focus_Top').css('backgroundPosition', '0 ' + '-' + (600 - y) + 'px') #initial BG position = '0 -600px'
 
-navScrolling = (b) ->
-  $('#Focus_Btm').removeClass().addClass b
-  if (b == 'web')
-    scrollPos = 0
-  else if (b == 'colorado')
-    scrollPos = 324
-  else
-    scrollPos = 650
+navScrolling = ($btn) ->
+  $('#Focus_Btm').removeClass().addClass $btn
+
+  switch $btn
+    when 'web' then scrollPos = 0
+    when 'colorado' then scrollPos = 324
+    else scrollPos = 650
+
   $('html, body').animate(
     scrollTop: scrollPos, 400)
 

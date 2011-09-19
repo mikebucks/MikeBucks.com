@@ -66,3 +66,22 @@ em { font-style: italic; }
 #resume h2,
 #resume h3 { font: 44px bold "league-gothic-1","league-gothic-2"; }
 #resume li p { margin: 0; }
+
+/* Small Screen */
+@media screen and (max-width: 800px) {
+/*   body { background: lime; } */
+}
+
+@media screen and (max-width: 480px) {
+  #home #MB_Wrapper { position: static; margin: 0; }
+  #home #Nav_Main,
+  #home #MB_Wrapper { display: none; }
+  #home #MB_Content { width: auto; margin: 10px auto 0 auto; padding: 0 10px; }
+  #home #Nav_Main ul li { width: 30.3%; margin: 5px 1.6%; }
+  #home #Nav_Main ul li a { width: auto; padding: 20px 0; color: #000; background: #000; text-indent: none; 
+    -webkit-border-radius: none !important; 
+       -moz-border-radius: none;
+            border-radius: none !important;
+  }
+  #home #MB_Content #web { padding: 0; }
+}
