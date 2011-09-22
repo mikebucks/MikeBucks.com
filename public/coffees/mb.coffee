@@ -7,14 +7,18 @@ setUpPage = ->
 detectYposition = ->
   yScrollPosition = $(document).scrollTop()
   $loveText = $('#Focus_Btm span')
+  $colorHook = $('#Focus_Btm')
   
   animateBackground(yScrollPosition)
   
   if (yScrollPosition > 645)
+    $('#Focus_Btm').removeClass().addClass 'beer'
     $loveText.html('Beer')
   else if (yScrollPosition > 300)
+    $('#Focus_Btm').removeClass().addClass 'colorado'
     $loveText.html('Colorado')
   else
+    $('#Focus_Btm').removeClass().addClass 'web'
     $loveText.html('The Web')
 
 animateBackground = (y) ->

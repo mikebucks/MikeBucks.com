@@ -9,15 +9,19 @@
     }
   };
   detectYposition = function() {
-    var $loveText, yScrollPosition;
+    var $colorHook, $loveText, yScrollPosition;
     yScrollPosition = $(document).scrollTop();
     $loveText = $('#Focus_Btm span');
+    $colorHook = $('#Focus_Btm');
     animateBackground(yScrollPosition);
     if (yScrollPosition > 645) {
+      $('#Focus_Btm').removeClass().addClass('beer');
       return $loveText.html('Beer');
     } else if (yScrollPosition > 300) {
+      $('#Focus_Btm').removeClass().addClass('colorado');
       return $loveText.html('Colorado');
     } else {
+      $('#Focus_Btm').removeClass().addClass('web');
       return $loveText.html('The Web');
     }
   };
