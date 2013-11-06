@@ -11,6 +11,8 @@ a:hover { color: white; background: black; text-decoration: none; }
 strong { font-weight: bold; }
 em { font-style: italic; }
 
+.dance { background: url('/images/dance.gif'); background-attachment: fixed; }
+
 #home h1, 
 #home h2, 
 #home h3 { width: 395px; }

@@ -35,6 +35,19 @@ navScrolling = ($btn) ->
   $('html, body').animate(
     scrollTop: scrollPos, 400)
 
+isDancing = false;
+makeItDance = () ->
+  if isDancing 
+    stopDancing()
+  else
+    isDancing = true;
+    $('body').addClass('dance')
+    $('#dance').text('Nah')
+stopDancing = () ->
+  isDancing = false;
+  $('body').removeClass('dance')  
+  $('#dance').text('Wanna Dance?')
+
 $(document).ready ->
   setUpPage()
   detectYposition()
@@ -47,3 +60,8 @@ $(document).ready ->
     $btn = $(this).attr('href').replace('#', '')
     navScrolling($btn)
     e.preventDefault()
+
+  $('#dance').click (e) ->
+    makeItDance()
+    e.preventDefault()
+
