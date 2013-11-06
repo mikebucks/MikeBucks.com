@@ -65,13 +65,14 @@ em { font-style: italic; }
 
 #home #web ul:first-of-type { margin-bottom: 5px; padding-bottom: 5px; }
 
-#resume { margin: 0 83px; font-size: 16px; }
+#resume { height: auto; margin: 83px; font-size: 16px; }
 #resume p,
 #resume h2,
 #resume li { margin: 0 0 16px 0; }
 #resume h2,
-#resume h3 { font: 44px bold "league-gothic-1","league-gothic-2"; }
+#resume h3 { font: 28px bold "league-gothic-1","league-gothic-2"; }
 #resume li p { margin: 0; }
+#resume a { display: block; padding: 0; margin: 0 0 20px 0; }
 
 /* Small Screen */
 @media screen and (max-width: 800px) {
