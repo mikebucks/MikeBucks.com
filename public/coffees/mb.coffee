@@ -45,7 +45,7 @@ makeItDance = () ->
     $('#dance').text('Nah')
 stopDancing = () ->
   isDancing = false;
-  $('body').removeClass('dance')  
+  $('body').removeClass('dance')
   $('#dance').text('Wanna Dance?')
 
 $(document).ready ->
